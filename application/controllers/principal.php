@@ -4,7 +4,8 @@ class Principal extends CI_Controller{
     function  index()
     {
         $this->load->helper('url');
-        $this->load->view('V_principal');        
+        $contenido = $this->load->view('V_productos',Array(),TRUE);
+        $this->load->view('V_principal',Array('cuerpo'=>$contenido));        
     }
 
 }

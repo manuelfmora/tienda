@@ -1,4 +1,3 @@
-<p>HOLA</p>
 <div class="container">
 <ul class="list-inline">
     <li><img src="<?=base_url()?>assets/img/coldplay.jpg"></li>
