@@ -8,10 +8,10 @@ class Principal extends CI_Controller{
         
         $Pdestacados=$this->M_principal->get_destacados();
         print_r($Pdestacados);
-        $data['Pdestacados']=$this->M_principal->get_destacados();       
-        $contenido = $this->load->view('V_productos',Array(),TRUE);
+        //$data['Pdestacados']=$this->M_principal->get_destacados();       
+        $contenido = $this->load->view('V_productos',Array('productos'=>$Pdestacados),TRUE);
         $this->load->view('V_principal',Array('cuerpo'=>$contenido));
-        $this->load->view('V_principal',$data);        
+        //$this->load->view('V_productos',$data);        
     }
 
 }
