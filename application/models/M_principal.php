@@ -14,6 +14,12 @@ class M_principal extends CI_Controller
             return $query->result();
             
         }
+        
+         public function get_unproducto($id){
+            $query=$this->db->query("select * from productos where  id_producto='$id'");
+            return $query->result();
+            
+        }
     
 
 	

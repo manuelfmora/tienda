@@ -1,8 +1,11 @@
 <div class="container">
 <ul class="list-inline">
-    <?php print_r(array_column($imagen, 'imagen'))?>
-    <li><a href="#"><img src="<?=base_url()?>"></li></a>
-  <li><a href="#"><img src="<?=base_url()?>assets/img/img2.jpg"</li></a>
-  <li><img src="<?=base_url()?>assets/img/img3.jpg"</li>
+<?php foreach($productos as $producto ): ?>
+    <li><a href="#"><img class="img-responsive" width="200" src="<?=base_url().'assets/img/'.$producto->imagen?>"></a></li>
+    <h4><?=$producto->nombre ?></h4></br>
+<h4><?=$producto->nombre ?></h4>
+<h4><?=$producto->nombre ?></h4>   
+<p><?=$producto->descripcion ?></p>   
+<?php endforeach; ?>
 </ul>
 </div>
